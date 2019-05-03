@@ -25,7 +25,7 @@ class PriceTrend(object):
 	def _extract_change(self, change):
 		if change is None: return None
 
-		return float(change[:-1])
+		return self._extract_price(change[:-1])
 
 	def __str__(self):
 		return "p:%s---t:%s---c:%s" % (self.price, self.trend, self.change)
